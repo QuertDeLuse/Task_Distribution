@@ -35,7 +35,9 @@ namespace CourseProject
 
 
             bool isTaskAlreadyExist = false;
+
             List<string> taskList = new List<string>();
+
             //Adding task from DB into the taskList
             for (int i = 0; i < tasksFromDB.Rows.Count; i++)
             {
@@ -47,13 +49,12 @@ namespace CourseProject
                     {
                         isTaskAlreadyExist = true;
                     }
-                }           
+                }         
                 
-                if(!isTaskAlreadyExist)
-                {
-                    taskList.Add(tasksFromDB.Rows[i][0].ToString().Trim());
-                    isTaskAlreadyExist = false;
-                }
+                if(!isTaskAlreadyExist)                
+                    taskList.Add(tasksFromDB.Rows[i][0].ToString().Trim());                   
+                
+                isTaskAlreadyExist = false;
             }
             comboBox1.DataSource = taskList;
             comboBox1.SelectedIndex = -1;
@@ -73,7 +74,7 @@ namespace CourseProject
             string taskName = comboBox1.Text;
             string nickName = comboBox2.Text;
 
-            if (comboBox1.SelectedIndex == -1 || comboBox1.SelectedIndex == -1)
+            if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
             {
                 MessageBox.Show("Не все поля заполнены!");
             } 
@@ -106,6 +107,9 @@ namespace CourseProject
                     "'" + process.executorNickname + "'," +
                     "'" + process.executorQualification + "'," +
                     "'" + process.ExecutorRating + "')");
+
+
+                this.Close();
             }            
         }
     }

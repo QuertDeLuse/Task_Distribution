@@ -104,7 +104,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button9.Location = new System.Drawing.Point(12, 347);
+            this.button9.Location = new System.Drawing.Point(12, 200);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(331, 42);
             this.button9.TabIndex = 10;
@@ -115,7 +115,7 @@
             // addProcess
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(364, 401);
+            this.ClientSize = new System.Drawing.Size(364, 261);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label4);

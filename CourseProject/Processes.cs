@@ -37,9 +37,70 @@ namespace CourseProject
         }
 
 
+        
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //Delete
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if ((dataGridView1.SelectedRows.Count > 0 && dataGridView1.SelectedRows.Count < 2) || (dataGridView1.SelectedCells.Count > 0 && dataGridView1.SelectedCells.Count < 2))
+            {
+                try
+                {
+                    var rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                    var processID = dataGridView1.Rows[rowIndex].Cells[0].Value;
+
+                    dbData.Select("DELETE FROM [dbo].[Processes] WHERE processID = '" + processID + "'");
+
+                    dataGridView1.Rows.Clear();
+                    update();
+
+                    MessageBox.Show("Удаление прошло успешно!");                    
+                }
+                catch
+                {
+                    MessageBox.Show("Что-то пошло не так!");
+                }
+                               
+            }
+            else
+            {
+                MessageBox.Show("Нужно выбрать одну строку в таблице или одну ячейку таблицы!");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbData.Select("DELETE FROM [dbo].[Processes]");
+
+                dataGridView1.Rows.Clear();
+                update();
+
+                MessageBox.Show("Удаление прошло успешно!");
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так!");
+            }
+            
+        }
+
+        private void Processes_Activated(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            update();
+        }
+
+
         void update()
-        {           
-            processes = dbData.ProcessManager.GetProcesses();           
+        {      
+            processes = dbData.ProcessManager.GetProcesses();
 
             for (int i = 0; i < processes.Count; i++)
             {
@@ -52,13 +113,10 @@ namespace CourseProject
                 dataGridView1.Rows[i].Cells[5].Value = processes[i].executorID;
                 dataGridView1.Rows[i].Cells[6].Value = processes[i].executorNickname;
                 dataGridView1.Rows[i].Cells[7].Value = processes[i].executorQualification;
-                dataGridView1.Rows[i].Cells[8].Value = processes[i].ExecutorRating;                
-            }           
+                dataGridView1.Rows[i].Cells[8].Value = processes[i].ExecutorRating;
+            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
     }    
 }
