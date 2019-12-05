@@ -73,6 +73,7 @@ namespace CourseProject
             }
         }
 
+        //Delete all
         private void button7_Click(object sender, EventArgs e)
         {
             try
@@ -117,6 +118,11 @@ namespace CourseProject
             }
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Tasks tasksForm = new Tasks();
+            this.Hide();
+            tasksForm.Show();            
+        }
     }    
 }

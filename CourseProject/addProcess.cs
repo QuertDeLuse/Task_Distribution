@@ -85,7 +85,7 @@ namespace CourseProject
 
                 var process = new Process();
 
-                process.processID = internalProcesses.Count+1;
+                //process.processID = internalProcesses.Count+1;
                 process.taskID = Convert.ToInt32(taskFromDB.Rows[0][0]);
                 process.taskName = taskName;
                 process.taskImportance = taskFromDB.Rows[0][4].ToString();
@@ -97,7 +97,7 @@ namespace CourseProject
                 process.ExecutorRating = Convert.ToInt32(executorFromDB.Rows[0][7]);
 
                 internalProcesses.Add(process);
-                dbData.Select("INSERT INTO [dbo].[Processes] VALUES ('" + process.processID + "', " +
+                dbData.Select("INSERT INTO [dbo].[Processes] VALUES (" +
                     "'" + process.taskID + "'," +
                     "'" + process.taskName + "'," +
                     "'" + process.taskImportance + "'," +
