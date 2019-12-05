@@ -32,6 +32,7 @@ namespace CourseProject
             Application.Exit();
         }
 
+        //Open Processes
         private void button1_Click(object sender, EventArgs e)
         {            
             Processes processesForm = new Processes();
@@ -122,6 +123,12 @@ namespace CourseProject
             update();
         }
 
-        
+        //Open Executors
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Executors executorsForm = new Executors();
+            this.Hide();
+            executorsForm.Show();
+        }
     }
 }

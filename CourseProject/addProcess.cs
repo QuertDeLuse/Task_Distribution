@@ -28,7 +28,7 @@ namespace CourseProject
             internalProcesses = processes;
 
             tasks = dbData.TaskqManager.GetTasks();
-            executors = dbData.ExecutorManager.GetExecutor();
+            executors = dbData.ExecutorManager.GetExecutors();
 
             DataTable tasksFromDB = dbData.Select("SELECT [miniDescr] FROM [dbo].[Tasks]");
             DataTable executorsFromDB = dbData.Select("SELECT [nickName] FROM [dbo].[Executors]");

@@ -120,7 +120,7 @@ namespace CourseProject
 
         public class ExecutorManager
         {
-            public static List<Executor> GetExecutor()
+            public static List<Executor> GetExecutors()
             {
                 var executors = new List<Executor>();
 

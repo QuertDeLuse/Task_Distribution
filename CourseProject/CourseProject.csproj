@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addExecutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addExecutor.Designer.cs">
+      <DependentUpon>addExecutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="addProcess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
       <DependentUpon>addTask.cs</DependentUpon>
     </Compile>
     <Compile Include="dbData.cs" />
+    <Compile Include="Executors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Executors.Designer.cs">
+      <DependentUpon>Executors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Processes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +85,17 @@
     <Compile Include="Tasks.Designer.cs">
       <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addExecutor.resx">
+      <DependentUpon>addExecutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addProcess.resx">
       <DependentUpon>addProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addTask.resx">
       <DependentUpon>addTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Executors.resx">
+      <DependentUpon>Executors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Processes.resx">
       <DependentUpon>Processes.cs</DependentUpon>

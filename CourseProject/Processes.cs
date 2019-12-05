@@ -124,5 +124,12 @@ namespace CourseProject
             this.Hide();
             tasksForm.Show();            
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Executors executors = new Executors();
+            this.Hide();
+            executors.Show();
+        }
     }    
 }
