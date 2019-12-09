@@ -152,9 +152,46 @@ namespace CourseProject
 
 
 
-        public class History
+        public class CompleteProcess
         {
+            public int processID { get; set; }
+            public int taskID { get; set; }
+            public string taskName { get; set; }
+            public string taskImportance { get; set; }
+            public string taskUrgency { get; set; }
+            public int executorID { get; set; }
+            public string executorNickname { get; set; }
+            public string executorQualification { get; set; }
+            public int ExecutorRating { get; set; }
+        }
 
+        public class CompleteProcessesManager
+        {
+            public static List<CompleteProcess> GetCompleteProcesses()
+            {
+                var completeProcesses = new List<CompleteProcess>();
+
+                DataTable completeProcessesData = Select("SELECT * FROM [dbo].[CompleteProcesses]");
+
+                for (int i = 0; i < completeProcessesData.Rows.Count; i++)
+                {
+                    var completeProcess = new CompleteProcess();
+
+                    completeProcess.processID = Convert.ToInt32(completeProcessesData.Rows[i][0]);
+                    completeProcess.taskID = Convert.ToInt32(completeProcessesData.Rows[i][1]);
+                    completeProcess.taskName = completeProcessesData.Rows[i][2].ToString();
+                    completeProcess.taskImportance = completeProcessesData.Rows[i][3].ToString();
+                    completeProcess.taskUrgency = completeProcessesData.Rows[i][4].ToString();
+                    completeProcess.executorID = Convert.ToInt32(completeProcessesData.Rows[i][5]);
+                    completeProcess.executorNickname = completeProcessesData.Rows[i][6].ToString();
+                    completeProcess.executorQualification = completeProcessesData.Rows[i][7].ToString();
+                    completeProcess.ExecutorRating = Convert.ToInt32(completeProcessesData.Rows[i][8]);
+
+                    completeProcesses.Add(completeProcess);
+                }
+
+                return completeProcesses;
+            }
         }
 
     }

@@ -100,6 +100,7 @@
             this.button4.Text = "История";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -263,57 +264,62 @@
             // 
             // executorID
             // 
-            this.executorID.HeaderText = "executorID";
+            this.executorID.HeaderText = "ID";
             this.executorID.Name = "executorID";
             this.executorID.ReadOnly = true;
+            this.executorID.Width = 40;
             // 
             // nickname
             // 
-            this.nickname.HeaderText = "nickname";
+            this.nickname.HeaderText = "Прозвище";
             this.nickname.Name = "nickname";
             this.nickname.ReadOnly = true;
+            this.nickname.Width = 110;
             // 
             // firstName
             // 
-            this.firstName.HeaderText = "firstName";
+            this.firstName.HeaderText = "Имя";
             this.firstName.Name = "firstName";
             this.firstName.ReadOnly = true;
             // 
             // secondName
             // 
-            this.secondName.HeaderText = "secondName";
+            this.secondName.HeaderText = "Фамилия";
             this.secondName.Name = "secondName";
             this.secondName.ReadOnly = true;
             // 
             // fathersName
             // 
-            this.fathersName.HeaderText = "fathersName";
+            this.fathersName.HeaderText = "Отчество";
             this.fathersName.Name = "fathersName";
             this.fathersName.ReadOnly = true;
             // 
             // qualification
             // 
-            this.qualification.HeaderText = "qualification";
+            this.qualification.HeaderText = "Квалификация";
             this.qualification.Name = "qualification";
             this.qualification.ReadOnly = true;
+            this.qualification.Width = 150;
             // 
             // specialization
             // 
-            this.specialization.HeaderText = "specialization";
+            this.specialization.HeaderText = "Специализация";
             this.specialization.Name = "specialization";
             this.specialization.ReadOnly = true;
+            this.specialization.Width = 150;
             // 
             // rating
             // 
-            this.rating.HeaderText = "rating";
+            this.rating.HeaderText = "Рейтинг";
             this.rating.Name = "rating";
             this.rating.ReadOnly = true;
             // 
             // phoneNumber
             // 
-            this.phoneNumber.HeaderText = "phoneNumber";
+            this.phoneNumber.HeaderText = "Номер телефона";
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.ReadOnly = true;
+            this.phoneNumber.Width = 110;
             // 
             // eMail
             // 

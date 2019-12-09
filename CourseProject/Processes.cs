@@ -44,7 +44,7 @@ namespace CourseProject
             Application.Exit();
         }
 
-        //Delete
+        //Delete One
         private void button6_Click(object sender, EventArgs e)
         {
             if ((dataGridView1.SelectedRows.Count > 0 && dataGridView1.SelectedRows.Count < 2) || (dataGridView1.SelectedCells.Count > 0 && dataGridView1.SelectedCells.Count < 2))
@@ -77,7 +77,7 @@ namespace CourseProject
         private void button7_Click(object sender, EventArgs e)
         {
             try
-            {
+            {              
                 dbData.Select("DELETE FROM [dbo].[Processes]");
 
                 dataGridView1.Rows.Clear();
@@ -130,6 +130,56 @@ namespace CourseProject
             Executors executors = new Executors();
             this.Hide();
             executors.Show();
+        }
+
+        //Match as a complete
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if ((dataGridView1.SelectedRows.Count > 0 && dataGridView1.SelectedRows.Count < 2) || (dataGridView1.SelectedCells.Count > 0 && dataGridView1.SelectedCells.Count < 2))
+            {
+                try
+                {
+                    var rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                    var processID = dataGridView1.Rows[rowIndex].Cells[0].Value;
+
+                    DataTable process = dbData.Select("SELECT * FROM [dbo].[Processes] WHERE processID = '" + processID + "'");
+
+                    dbData.Select("INSERT INTO [dbo].[CompleteProcesses] VALUES (" +
+                    "'" + process.Rows[0][1] + "'," +
+                    "'" + process.Rows[0][2] + "'," +
+                    "'" + process.Rows[0][3] + "'," +
+                    "'" + process.Rows[0][4] + "'," +
+
+                    "'" + process.Rows[0][5] + "'," +
+                    "'" + process.Rows[0][6] + "'," +
+                    "'" + process.Rows[0][7] + "'," +
+                    "'" + process.Rows[0][8] + "')");
+
+
+                    dbData.Select("DELETE FROM [dbo].[Processes] WHERE processID = '" + processID + "'");
+
+                    dataGridView1.Rows.Clear();
+                    update();
+
+                    MessageBox.Show("Процесс успешно отмечен как выполненный!");
+                }
+                catch
+                {
+                    MessageBox.Show("Что-то пошло не так!");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Нужно выбрать одну строку в таблице или одну ячейку таблицы!");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            History historyForm = new History();
+            this.Hide();
+            historyForm.Show();
         }
     }    
 }

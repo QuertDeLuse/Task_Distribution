@@ -107,7 +107,7 @@ namespace CourseProject
                 }
                 catch
                 {
-                    MessageBox.Show("Что-то пошло не так!");
+                    MessageBox.Show("Невозможно удалить исполнителя, если он где-то уже использован!");
                 }
 
             }
@@ -131,8 +131,15 @@ namespace CourseProject
             }
             catch
             {
-                MessageBox.Show("Что-то пошло не так!");
+                MessageBox.Show("Невозможно удалить всех исполнителей, если хотя бы один из них где-то уже использован!");
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            History historyForm = new History();
+            this.Hide();
+            historyForm.Show();
         }
     }
 }

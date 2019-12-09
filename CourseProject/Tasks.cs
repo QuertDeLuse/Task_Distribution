@@ -89,7 +89,7 @@ namespace CourseProject
                 }
                 catch
                 {
-                    MessageBox.Show("Что-то пошло не так!");
+                    MessageBox.Show("Невозможно удалить задание, если оно где-то уже использовано!");
                 }
 
             }
@@ -113,7 +113,7 @@ namespace CourseProject
             }
             catch
             {
-                MessageBox.Show("Что-то пошло не так!");
+                MessageBox.Show("Невозможно удалить все задания, если хотя бы одно где-то уже использовано!");
             }
         }
 
@@ -129,6 +129,13 @@ namespace CourseProject
             Executors executorsForm = new Executors();
             this.Hide();
             executorsForm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            History historyForm = new History();
+            this.Hide();
+            historyForm.Show();
         }
     }
 }

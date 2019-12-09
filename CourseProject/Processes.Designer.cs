@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -36,6 +36,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.processID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,11 +51,6 @@
             this.executorNickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorQualification = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +101,7 @@
             this.button4.Text = "История";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -181,62 +183,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(943, 506);
             this.dataGridView1.TabIndex = 1;
             // 
-            // processID
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.processID.DefaultCellStyle = dataGridViewCellStyle6;
-            this.processID.HeaderText = "processID";
-            this.processID.Name = "processID";
-            this.processID.ReadOnly = true;
-            // 
-            // taskID
-            // 
-            this.taskID.HeaderText = "taskID";
-            this.taskID.Name = "taskID";
-            this.taskID.ReadOnly = true;
-            // 
-            // taskName
-            // 
-            this.taskName.HeaderText = "taskName";
-            this.taskName.Name = "taskName";
-            this.taskName.ReadOnly = true;
-            // 
-            // taskImportance
-            // 
-            this.taskImportance.HeaderText = "taskImportance";
-            this.taskImportance.Name = "taskImportance";
-            this.taskImportance.ReadOnly = true;
-            // 
-            // taskUrgency
-            // 
-            this.taskUrgency.HeaderText = "taskUrgency";
-            this.taskUrgency.Name = "taskUrgency";
-            this.taskUrgency.ReadOnly = true;
-            // 
-            // executorID
-            // 
-            this.executorID.HeaderText = "executorID";
-            this.executorID.Name = "executorID";
-            this.executorID.ReadOnly = true;
-            // 
-            // executorNickname
-            // 
-            this.executorNickname.HeaderText = "executorNickname";
-            this.executorNickname.Name = "executorNickname";
-            this.executorNickname.ReadOnly = true;
-            // 
-            // executorQualification
-            // 
-            this.executorQualification.HeaderText = "executorQualification";
-            this.executorQualification.Name = "executorQualification";
-            this.executorQualification.ReadOnly = true;
-            // 
-            // executorRating
-            // 
-            this.executorRating.HeaderText = "executorRating";
-            this.executorRating.Name = "executorRating";
-            this.executorRating.ReadOnly = true;
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
@@ -246,9 +192,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button6.Location = new System.Drawing.Point(556, 606);
+            this.button6.Location = new System.Drawing.Point(501, 606);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(185, 60);
+            this.button6.Size = new System.Drawing.Size(169, 60);
             this.button6.TabIndex = 5;
             this.button6.Text = "Удалить";
             this.button6.UseVisualStyleBackColor = false;
@@ -263,9 +209,9 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.Location = new System.Drawing.Point(804, 606);
+            this.button7.Location = new System.Drawing.Point(693, 606);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(185, 60);
+            this.button7.Size = new System.Drawing.Size(169, 60);
             this.button7.TabIndex = 6;
             this.button7.Text = "Удалить все";
             this.button7.UseVisualStyleBackColor = false;
@@ -280,9 +226,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button8.Location = new System.Drawing.Point(1051, 606);
+            this.button8.Location = new System.Drawing.Point(880, 606);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(185, 60);
+            this.button8.Size = new System.Drawing.Size(169, 60);
             this.button8.TabIndex = 7;
             this.button8.Text = "Обновить";
             this.button8.UseVisualStyleBackColor = false;
@@ -310,17 +256,97 @@
             this.button9.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.button9.Location = new System.Drawing.Point(309, 606);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(185, 60);
+            this.button9.Size = new System.Drawing.Size(169, 60);
             this.button9.TabIndex = 9;
             this.button9.Text = "Добавить";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.button10.FlatAppearance.BorderSize = 3;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button10.Location = new System.Drawing.Point(1067, 606);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(169, 60);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "Отметить как выполненное";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // processID
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.processID.DefaultCellStyle = dataGridViewCellStyle1;
+            this.processID.HeaderText = "ID";
+            this.processID.Name = "processID";
+            this.processID.ReadOnly = true;
+            this.processID.Width = 40;
+            // 
+            // taskID
+            // 
+            this.taskID.HeaderText = "ID задания";
+            this.taskID.Name = "taskID";
+            this.taskID.ReadOnly = true;
+            // 
+            // taskName
+            // 
+            this.taskName.HeaderText = "Название задания";
+            this.taskName.Name = "taskName";
+            this.taskName.ReadOnly = true;
+            // 
+            // taskImportance
+            // 
+            this.taskImportance.HeaderText = "Важность задания";
+            this.taskImportance.Name = "taskImportance";
+            this.taskImportance.ReadOnly = true;
+            this.taskImportance.Width = 110;
+            // 
+            // taskUrgency
+            // 
+            this.taskUrgency.HeaderText = "Срочность задания";
+            this.taskUrgency.Name = "taskUrgency";
+            this.taskUrgency.ReadOnly = true;
+            this.taskUrgency.Width = 120;
+            // 
+            // executorID
+            // 
+            this.executorID.HeaderText = "ID исполнителя";
+            this.executorID.Name = "executorID";
+            this.executorID.ReadOnly = true;
+            this.executorID.Width = 130;
+            // 
+            // executorNickname
+            // 
+            this.executorNickname.HeaderText = "Прозвище исполнителя";
+            this.executorNickname.Name = "executorNickname";
+            this.executorNickname.ReadOnly = true;
+            this.executorNickname.Width = 130;
+            // 
+            // executorQualification
+            // 
+            this.executorQualification.HeaderText = "Квалификация исполнителя";
+            this.executorQualification.Name = "executorQualification";
+            this.executorQualification.ReadOnly = true;
+            this.executorQualification.Width = 150;
+            // 
+            // executorRating
+            // 
+            this.executorRating.HeaderText = "Рейтинг исполнителя";
+            this.executorRating.Name = "executorRating";
+            this.executorRating.ReadOnly = true;
             // 
             // Processes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
@@ -355,6 +381,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DataGridViewTextBoxColumn processID;
         private System.Windows.Forms.DataGridViewTextBoxColumn taskID;
         private System.Windows.Forms.DataGridViewTextBoxColumn taskName;

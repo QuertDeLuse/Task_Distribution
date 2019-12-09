@@ -1,6 +1,6 @@
 ﻿namespace CourseProject
 {
-    partial class Tasks
+    partial class History
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button9 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.processID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.miniDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taskName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taskImportance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taskUrgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complexity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.executorNickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.executorQualification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.executorRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button9
+            // label1
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.button9.FlatAppearance.BorderSize = 3;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button9.Location = new System.Drawing.Point(293, 607);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(185, 60);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "Добавить";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto Lt", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(283, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(602, 58);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Выполненные процессы";
             // 
             // button8
             // 
@@ -76,10 +73,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button8.Location = new System.Drawing.Point(1051, 607);
+            this.button8.Location = new System.Drawing.Point(1067, 607);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(185, 60);
-            this.button8.TabIndex = 14;
+            this.button8.Size = new System.Drawing.Size(169, 60);
+            this.button8.TabIndex = 15;
             this.button8.Text = "Обновить";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -93,10 +90,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.Location = new System.Drawing.Point(800, 607);
+            this.button7.Location = new System.Drawing.Point(892, 607);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(185, 60);
-            this.button7.TabIndex = 13;
+            this.button7.Size = new System.Drawing.Size(169, 60);
+            this.button7.TabIndex = 14;
             this.button7.Text = "Удалить все";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -110,48 +107,13 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button6.Location = new System.Drawing.Point(535, 607);
+            this.button6.Location = new System.Drawing.Point(717, 607);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(185, 60);
-            this.button6.TabIndex = 12;
+            this.button6.Size = new System.Drawing.Size(169, 60);
+            this.button6.TabIndex = 13;
             this.button6.Text = "Удалить";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Lt", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(283, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 58);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Задания";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.taskID,
-            this.miniDescr,
-            this.fullDescr,
-            this.urgency,
-            this.executorID,
-            this.complexity});
-            this.dataGridView1.Location = new System.Drawing.Point(293, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(943, 502);
-            this.dataGridView1.TabIndex = 11;
             // 
             // button5
             // 
@@ -172,13 +134,13 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button4.Location = new System.Drawing.Point(0, 276);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 273);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(262, 90);
@@ -186,7 +148,6 @@
             this.button4.Text = "История";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -196,7 +157,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.Location = new System.Drawing.Point(0, 180);
+            this.button3.Location = new System.Drawing.Point(0, 183);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(262, 90);
@@ -208,12 +169,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.button2.Location = new System.Drawing.Point(0, 90);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -222,6 +183,7 @@
             this.button2.Text = "Задания";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -249,71 +211,118 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(-2, -3);
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(262, 685);
-            this.panel1.TabIndex = 10;
+            this.panel1.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.processID,
+            this.taskID,
+            this.taskName,
+            this.taskImportance,
+            this.taskUrgency,
+            this.executorID,
+            this.executorNickname,
+            this.executorQualification,
+            this.executorRating});
+            this.dataGridView1.Location = new System.Drawing.Point(293, 71);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(943, 506);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // processID
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.processID.DefaultCellStyle = dataGridViewCellStyle2;
+            this.processID.HeaderText = "ID";
+            this.processID.Name = "processID";
+            this.processID.ReadOnly = true;
+            this.processID.Width = 40;
             // 
             // taskID
             // 
-            this.taskID.HeaderText = "ID";
+            this.taskID.HeaderText = "ID задания";
             this.taskID.Name = "taskID";
             this.taskID.ReadOnly = true;
             // 
-            // miniDescr
+            // taskName
             // 
-            this.miniDescr.HeaderText = "Краткое описание";
-            this.miniDescr.Name = "miniDescr";
-            this.miniDescr.ReadOnly = true;
-            this.miniDescr.Width = 200;
+            this.taskName.HeaderText = "Название задания";
+            this.taskName.Name = "taskName";
+            this.taskName.ReadOnly = true;
             // 
-            // fullDescr
+            // taskImportance
             // 
-            this.fullDescr.HeaderText = "Полное описание";
-            this.fullDescr.Name = "fullDescr";
-            this.fullDescr.ReadOnly = true;
-            this.fullDescr.Width = 300;
+            this.taskImportance.HeaderText = "Важность задания";
+            this.taskImportance.Name = "taskImportance";
+            this.taskImportance.ReadOnly = true;
+            this.taskImportance.Width = 110;
             // 
-            // urgency
+            // taskUrgency
             // 
-            this.urgency.HeaderText = "Срочность";
-            this.urgency.Name = "urgency";
-            this.urgency.ReadOnly = true;
-            this.urgency.Width = 110;
+            this.taskUrgency.HeaderText = "Срочность задания";
+            this.taskUrgency.Name = "taskUrgency";
+            this.taskUrgency.ReadOnly = true;
+            this.taskUrgency.Width = 120;
             // 
             // executorID
             // 
-            this.executorID.HeaderText = "Важность";
+            this.executorID.HeaderText = "ID исполнителя";
             this.executorID.Name = "executorID";
             this.executorID.ReadOnly = true;
+            this.executorID.Width = 130;
             // 
-            // complexity
+            // executorNickname
             // 
-            this.complexity.HeaderText = "Сложность";
-            this.complexity.Name = "complexity";
-            this.complexity.ReadOnly = true;
-            this.complexity.Width = 110;
+            this.executorNickname.HeaderText = "Прозвище исполнителя";
+            this.executorNickname.Name = "executorNickname";
+            this.executorNickname.ReadOnly = true;
+            this.executorNickname.Width = 130;
             // 
-            // Tasks
+            // executorQualification
+            // 
+            this.executorQualification.HeaderText = "Квалификация исполнителя";
+            this.executorQualification.Name = "executorQualification";
+            this.executorQualification.ReadOnly = true;
+            this.executorQualification.Width = 150;
+            // 
+            // executorRating
+            // 
+            this.executorRating.HeaderText = "Рейтинг исполнителя";
+            this.executorRating.Name = "executorRating";
+            this.executorRating.ReadOnly = true;
+            // 
+            // History
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Name = "Tasks";
+            this.Name = "History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tasks";
-            this.Activated += new System.EventHandler(this.Tasks_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tasks_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "History";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.History_FormClosing);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,23 +330,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn processID;
         private System.Windows.Forms.DataGridViewTextBoxColumn taskID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn miniDescr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullDescr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urgency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskImportance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskUrgency;
         private System.Windows.Forms.DataGridViewTextBoxColumn executorID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn complexity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn executorNickname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn executorQualification;
+        private System.Windows.Forms.DataGridViewTextBoxColumn executorRating;
     }
 }

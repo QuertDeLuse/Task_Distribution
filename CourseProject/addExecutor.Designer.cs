@@ -49,6 +49,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -194,16 +196,17 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(162, 369);
+            this.textBox7.Location = new System.Drawing.Point(162, 366);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(185, 30);
             this.textBox7.TabIndex = 50;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(19, 372);
+            this.label5.Location = new System.Drawing.Point(19, 357);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 23);
             this.label5.TabIndex = 49;
@@ -211,16 +214,17 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(162, 415);
+            this.textBox8.Location = new System.Drawing.Point(162, 425);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(185, 30);
             this.textBox8.TabIndex = 52;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(19, 409);
+            this.label6.Location = new System.Drawing.Point(19, 410);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 46);
             this.label6.TabIndex = 51;
@@ -228,7 +232,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(162, 463);
+            this.textBox9.Location = new System.Drawing.Point(162, 474);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(185, 30);
             this.textBox9.TabIndex = 54;
@@ -237,16 +241,40 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(19, 466);
+            this.label7.Location = new System.Drawing.Point(19, 477);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 23);
             this.label7.TabIndex = 53;
             this.label7.Text = "eMail";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(20, 380);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 15);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "* только цифры";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(20, 453);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 15);
+            this.label13.TabIndex = 56;
+            this.label13.Text = "* только цифры";
+            // 
             // addExecutor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(364, 574);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox8);
@@ -298,5 +326,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
