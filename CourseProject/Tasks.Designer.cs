@@ -34,18 +34,19 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.taskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.miniDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.complexity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -153,6 +154,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(943, 502);
             this.dataGridView1.TabIndex = 11;
             // 
+            // taskID
+            // 
+            this.taskID.HeaderText = "ID";
+            this.taskID.Name = "taskID";
+            this.taskID.ReadOnly = true;
+            // 
+            // miniDescr
+            // 
+            this.miniDescr.HeaderText = "Краткое описание";
+            this.miniDescr.Name = "miniDescr";
+            this.miniDescr.ReadOnly = true;
+            this.miniDescr.Width = 200;
+            // 
+            // fullDescr
+            // 
+            this.fullDescr.HeaderText = "Полное описание";
+            this.fullDescr.Name = "fullDescr";
+            this.fullDescr.ReadOnly = true;
+            this.fullDescr.Width = 300;
+            // 
+            // urgency
+            // 
+            this.urgency.HeaderText = "Срочность";
+            this.urgency.Name = "urgency";
+            this.urgency.ReadOnly = true;
+            this.urgency.Width = 110;
+            // 
+            // executorID
+            // 
+            this.executorID.HeaderText = "Важность";
+            this.executorID.Name = "executorID";
+            this.executorID.ReadOnly = true;
+            // 
+            // complexity
+            // 
+            this.complexity.HeaderText = "Сложность";
+            this.complexity.Name = "complexity";
+            this.complexity.ReadOnly = true;
+            this.complexity.Width = 110;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Gainsboro;
@@ -244,6 +285,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -254,45 +296,23 @@
             this.panel1.Size = new System.Drawing.Size(262, 685);
             this.panel1.TabIndex = 10;
             // 
-            // taskID
+            // button11
             // 
-            this.taskID.HeaderText = "ID";
-            this.taskID.Name = "taskID";
-            this.taskID.ReadOnly = true;
-            // 
-            // miniDescr
-            // 
-            this.miniDescr.HeaderText = "Краткое описание";
-            this.miniDescr.Name = "miniDescr";
-            this.miniDescr.ReadOnly = true;
-            this.miniDescr.Width = 200;
-            // 
-            // fullDescr
-            // 
-            this.fullDescr.HeaderText = "Полное описание";
-            this.fullDescr.Name = "fullDescr";
-            this.fullDescr.ReadOnly = true;
-            this.fullDescr.Width = 300;
-            // 
-            // urgency
-            // 
-            this.urgency.HeaderText = "Срочность";
-            this.urgency.Name = "urgency";
-            this.urgency.ReadOnly = true;
-            this.urgency.Width = 110;
-            // 
-            // executorID
-            // 
-            this.executorID.HeaderText = "Важность";
-            this.executorID.Name = "executorID";
-            this.executorID.ReadOnly = true;
-            // 
-            // complexity
-            // 
-            this.complexity.HeaderText = "Сложность";
-            this.complexity.Name = "complexity";
-            this.complexity.ReadOnly = true;
-            this.complexity.Width = 110;
+            this.button11.BackColor = System.Drawing.Color.Gainsboro;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button11.Location = new System.Drawing.Point(0, 368);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(262, 90);
+            this.button11.TabIndex = 17;
+            this.button11.Text = "Отчеты";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // Tasks
             // 
@@ -339,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn urgency;
         private System.Windows.Forms.DataGridViewTextBoxColumn executorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn complexity;
+        private System.Windows.Forms.Button button11;
     }
 }

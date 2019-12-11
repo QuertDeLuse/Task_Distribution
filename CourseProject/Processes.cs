@@ -181,5 +181,12 @@ namespace CourseProject
             this.Hide();
             historyForm.Show();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Repots repotsForm = new Repots();
+            this.Hide();
+            repotsForm.Show();
+        }
     }    
 }

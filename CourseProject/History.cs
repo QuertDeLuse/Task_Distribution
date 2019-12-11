@@ -126,5 +126,12 @@ namespace CourseProject
                 MessageBox.Show("Что-то пошло не так!");
             }
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Repots repotsForm = new Repots();
+            this.Hide();
+            repotsForm.Show();
+        }
     }
 }

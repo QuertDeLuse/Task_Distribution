@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.executorNickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorQualification = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -206,6 +207,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -245,8 +247,8 @@
             // 
             // processID
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.processID.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.processID.DefaultCellStyle = dataGridViewCellStyle1;
             this.processID.HeaderText = "ID";
             this.processID.Name = "processID";
             this.processID.ReadOnly = true;
@@ -305,6 +307,24 @@
             this.executorRating.Name = "executorRating";
             this.executorRating.ReadOnly = true;
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Gainsboro;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button11.Location = new System.Drawing.Point(0, 364);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(262, 90);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Отчеты";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // History
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -350,5 +370,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn executorNickname;
         private System.Windows.Forms.DataGridViewTextBoxColumn executorQualification;
         private System.Windows.Forms.DataGridViewTextBoxColumn executorRating;
+        private System.Windows.Forms.Button button11;
     }
 }
