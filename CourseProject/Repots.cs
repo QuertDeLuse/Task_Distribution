@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ClosedXML.Excel;
+
 namespace CourseProject
 {
     public partial class Repots : Form
@@ -58,25 +60,74 @@ namespace CourseProject
         //Process Report
         private void button9_Click(object sender, EventArgs e)
         {
+            try
+            {
+                XLWorkbook wb = new XLWorkbook();
+                DataTable dt = dbData.Select("SELECT * FROM [dbo].[Processes]");
+                wb.Worksheets.Add(dt, "Processes");
+                wb.SaveAs("Processes.xlsx");
 
+                MessageBox.Show("Отчет успешно сформирован!");
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так!");
+            }
+            
         }
 
         //Complete Process Report
         private void button6_Click(object sender, EventArgs e)
         {
+            try
+            {
+                XLWorkbook wb = new XLWorkbook();
+                DataTable dt = dbData.Select("SELECT * FROM [dbo].[CompleteProcesses]");
+                wb.Worksheets.Add(dt, "CompleteProcesses");
+                wb.SaveAs("CompleteProcesses.xlsx");
 
+                MessageBox.Show("Отчет успешно сформирован!");
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так!");
+            }
         }
 
         //Tasks Report
         private void button7_Click(object sender, EventArgs e)
         {
+            try
+            {
+                XLWorkbook wb = new XLWorkbook();
+                DataTable dt = dbData.Select("SELECT * FROM [dbo].[Tasks]");
+                wb.Worksheets.Add(dt, "Tasks");
+                wb.SaveAs("Tasks.xlsx");
 
+                MessageBox.Show("Отчет успешно сформирован!");
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так!");
+            }
         }
 
         //Executors Report
         private void button8_Click(object sender, EventArgs e)
         {
+            try
+            {
+                XLWorkbook wb = new XLWorkbook();
+                DataTable dt = dbData.Select("SELECT * FROM [dbo].[Executors]");
+                wb.Worksheets.Add(dt, "Executors");
+                wb.SaveAs("Executors.xlsx");
 
+                MessageBox.Show("Отчет успешно сформирован!");
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так!");
+            }
         }
     }
 }
