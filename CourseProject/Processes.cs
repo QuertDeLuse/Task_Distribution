@@ -158,6 +158,9 @@ namespace CourseProject
 
                     dbData.Select("DELETE FROM [dbo].[Processes] WHERE processID = '" + processID + "'");
 
+                    dbData.Select("DELETE FROM [dbo].[Tasks] WHERE taskID = '" + process.Rows[0][1] + "'");
+
+
                     dataGridView1.Rows.Clear();
                     update();
 
@@ -187,6 +190,11 @@ namespace CourseProject
             Repots repotsForm = new Repots();
             this.Hide();
             repotsForm.Show();
+        }
+
+        private void Processes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }    
 }

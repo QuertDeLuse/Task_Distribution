@@ -133,5 +133,11 @@ namespace CourseProject
             this.Hide();
             repotsForm.Show();
         }
+
+        private void History_Activated(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            update();
+        }
     }
 }

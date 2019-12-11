@@ -39,6 +39,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.processID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,6 @@
             this.executorNickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorQualification = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executorRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -218,6 +218,24 @@
             this.panel1.Size = new System.Drawing.Size(262, 685);
             this.panel1.TabIndex = 11;
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Gainsboro;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button11.Location = new System.Drawing.Point(0, 364);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(262, 90);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Отчеты";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -307,24 +325,6 @@
             this.executorRating.Name = "executorRating";
             this.executorRating.ReadOnly = true;
             // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Gainsboro;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button11.Location = new System.Drawing.Point(0, 364);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(262, 90);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Отчеты";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
             // History
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -340,6 +340,7 @@
             this.Name = "History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "History";
+            this.Activated += new System.EventHandler(this.History_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.History_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
