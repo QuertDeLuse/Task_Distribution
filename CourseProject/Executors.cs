@@ -148,5 +148,34 @@ namespace CourseProject
             this.Hide();
             repotsForm.Show();
         }
+
+       //Edit
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if ((dataGridView1.SelectedRows.Count > 0 && dataGridView1.SelectedRows.Count < 2) || (dataGridView1.SelectedCells.Count > 0 && dataGridView1.SelectedCells.Count < 2))
+            {
+                try
+                {
+                    var rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                    var executorID = dataGridView1.Rows[rowIndex].Cells[0].Value;
+
+                    ExecutorEdit executorEditForm = new ExecutorEdit(executorID);
+                    executorEditForm.ShowDialog();
+
+                    
+
+                   
+                }
+                catch
+                {
+                    MessageBox.Show("Невозможно редактировать исполнителя!");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Нужно выбрать одну строку в таблице или одну ячейку таблицы!");
+            }
+        }
     }
 }

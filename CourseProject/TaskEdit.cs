@@ -21,8 +21,8 @@ namespace CourseProject
 
             DataTable taskInfoTable = dbData.Select("SELECT * FROM [dbo].[Tasks] WHERE taskID = '"+ internalTaskID + "'");
 
-            textBox1.Text = taskInfoTable.Rows[0][1].ToString();
-            textBox2.Text = taskInfoTable.Rows[0][2].ToString();          
+            textBox1.Text = taskInfoTable.Rows[0][1].ToString().Trim();
+            textBox2.Text = taskInfoTable.Rows[0][2].ToString().Trim();          
                     
             comboBox1.SelectedIndex = comboBox1.Items.IndexOf(taskInfoTable.Rows[0][3].ToString().Trim());
             comboBox2.SelectedIndex = comboBox2.Items.IndexOf(taskInfoTable.Rows[0][4].ToString().Trim());
@@ -32,8 +32,7 @@ namespace CourseProject
 
         //Edit
         private void button9_Click(object sender, EventArgs e)
-        {
-            //UPDATE orders SET Price =
+        {           
 
             if (textBox1.Text == "" || textBox2.Text == "" || comboBox1.SelectedItem == null || comboBox2.SelectedItem == null || comboBox3.SelectedItem == null)
             {

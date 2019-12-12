@@ -272,7 +272,7 @@
             // addExecutor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(364, 574);
+            this.ClientSize = new System.Drawing.Size(364, 576);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox9);
