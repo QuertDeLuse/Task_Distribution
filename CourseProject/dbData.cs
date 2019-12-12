@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace CourseProject
 {
+    
+
     public class dbData
     {
+        public static bool isLogin = false;
+
         public static DataTable Select(string selectSQL)
         {
             DataTable dataTable = new DataTable("dataBase");

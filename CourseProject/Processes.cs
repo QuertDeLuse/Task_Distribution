@@ -14,12 +14,16 @@ namespace CourseProject
 {
     public partial class Processes : Form
     {
+        //bool isLogin = false;
+
         List<Process> processes = new List<Process>();
 
         public Processes()
         {
             InitializeComponent();
             update();
+
+            
         }
 
         //Update
@@ -195,6 +199,54 @@ namespace CourseProject
         private void Processes_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+
+
+        //Auth
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                try
+                {
+                    DataTable dt = dbData.Select("SELECT * FROM [dbo].[Users] WHERE login = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'");
+
+                    if (dt.Rows.Count != 0)
+                    {                        
+                        dbData.isLogin = true;
+                        auth.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неправильный логин или пароль!");
+                    }
+                 }
+                catch
+                {
+                    MessageBox.Show("Что-то пошло не так!");
+                }
+            } 
+            else
+            {
+                MessageBox.Show("Не все поля заполнены!");
+            }
+        }
+
+        //Reg
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Reg regForm = new Reg();
+            regForm.ShowDialog();
+        }
+               
+
+        private void Processes_Shown(object sender, EventArgs e)
+        {
+            if (dbData.isLogin)
+            {
+                auth.Visible = false;
+            }
         }
     }    
 }

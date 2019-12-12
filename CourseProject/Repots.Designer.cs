@@ -51,7 +51,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 368);
+            this.button11.Location = new System.Drawing.Point(0, 365);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button11.Size = new System.Drawing.Size(262, 90);
@@ -245,6 +245,7 @@
             // Repots
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -253,7 +254,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Repots";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repots";

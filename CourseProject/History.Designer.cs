@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -226,7 +226,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Roboto Lt", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button11.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button11.Location = new System.Drawing.Point(0, 364);
+            this.button11.Location = new System.Drawing.Point(0, 363);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button11.Size = new System.Drawing.Size(262, 90);
@@ -265,8 +265,8 @@
             // 
             // processID
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.processID.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.processID.DefaultCellStyle = dataGridViewCellStyle2;
             this.processID.HeaderText = "ID";
             this.processID.Name = "processID";
             this.processID.ReadOnly = true;
