@@ -47,6 +47,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button9.Location = new System.Drawing.Point(293, 607);
+            this.button9.Location = new System.Drawing.Point(293, 609);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(185, 60);
             this.button9.TabIndex = 16;
@@ -77,7 +78,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button8.Location = new System.Drawing.Point(1051, 607);
+            this.button8.Location = new System.Drawing.Point(1051, 609);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(185, 60);
             this.button8.TabIndex = 14;
@@ -94,7 +95,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.Location = new System.Drawing.Point(800, 607);
+            this.button7.Location = new System.Drawing.Point(860, 609);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(185, 60);
             this.button7.TabIndex = 13;
@@ -111,9 +112,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button6.Location = new System.Drawing.Point(535, 607);
+            this.button6.Location = new System.Drawing.Point(675, 609);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(185, 60);
+            this.button6.Size = new System.Drawing.Size(179, 60);
             this.button6.TabIndex = 12;
             this.button6.Text = "Удалить";
             this.button6.UseVisualStyleBackColor = false;
@@ -314,11 +315,29 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.button10.FlatAppearance.BorderSize = 3;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button10.Location = new System.Drawing.Point(484, 609);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(185, 60);
+            this.button10.TabIndex = 17;
+            this.button10.Text = "Редактировать";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Tasks
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -360,5 +379,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn executorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn complexity;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
     }
 }

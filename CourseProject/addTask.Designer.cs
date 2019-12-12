@@ -190,7 +190,7 @@
             // addTask
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(364, 485);
+            this.ClientSize = new System.Drawing.Size(364, 486);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
